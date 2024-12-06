@@ -17,12 +17,13 @@ public class StudentService {
         students.add(student);
     }
 
+   public Student getStudentById(int studentId){
 
-//    public static void main(String[] args){
-//        Student s1 = new Student(1,"Raj");
-//        StudentService studentService = new StudentService();
-//        studentService.addStudent(s1);
-//    }
+        return students.stream()
+                .filter((student)->student.getId()==studentId)
+                .findFirst()
+                .orElse(null);
+   }
 
 
 }
