@@ -3,6 +3,7 @@ package Service;
 import Controller.Student;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -18,10 +19,15 @@ class StudentServiceTest {
 
 
         assertTrue(actualResult);
-        assertTrue(actualResult, "List of student is not empty");  //Message will  be printed if assertion fails
+
+        //Message always evaluated, even when the assertion passes, though won't be printed if test pass
+        assertTrue(actualResult, "List of student is not empty");
+
+        /* Message only evaluated when the assertion fails, Lazy Load */
+        assertTrue(actualResult, ()->"List of student is not empty");
 
         assertTrue(()->actualResult);  //Boolean Supplier interface
-        assertTrue(()->actualResult, "List of student is not empty");  //Message will  be printed if assertion fails
+        assertTrue(()->actualResult, "List of student is not empty");
     }
 
 
@@ -89,9 +95,11 @@ class StudentServiceTest {
 
         assertEquals(student,actualObject);
 
-        assertEquals(1,actualObject.getId(),"Student Id did not match"); //If test fails message will be printed
+        //Message always evaluated, even when the assertion passes, though won't be printed if test pass
+        assertEquals(1,actualObject.getId(),"Student Id did not match");
 
-        assertEquals(student,actualObject,"Object did not match"); //If test fails message will be printed
+        /* Message only evaluated when the assertion fails, Lazy Load */
+        assertEquals(student,actualObject,"Object did not match");
 
     }
 
@@ -107,14 +115,41 @@ class StudentServiceTest {
         assertNotEquals(2,actualObject.getId());
         assertNotEquals("Rajeev Singh",actualObject.getName());
 
-        assertNotEquals(11,actualObject.getId(),"Student Id is equal"); //If test fails message will be printed
+        assertNotEquals(11,actualObject.getId(),"Student Id is equal"); //Message always evaluated, even when the assertion passes
 
+        assertNotEquals(11,actualObject.getId(),()->"Student Id is equal");
     }
 
 
+    @Test
+    public void getStudentNamesByDepartmentTestUsing_AssertArrayEqual(){
 
+        StudentService studentService = new StudentService();
 
+        Student student = new Student(1,"Rajeev","Science");
+        Student student1 = new Student(2,"Ravi","Science");
+        Student student2 = new Student(3,"Kavi","Arts");
 
+        studentService.addStudent(student);
+        studentService.addStudent(student1);
+        studentService.addStudent(student2);
+
+        String[] actualArray = studentService.getStudentNamesByDepartment("Science");
+        String[] expectedArray = {"Rajeev","Ravi"};
+
+        assertArrayEquals(expectedArray,actualArray);
+
+        // Message always evaluated, even when the assertion passes
+        assertArrayEquals(expectedArray,actualArray, "Student names are not equal");
+        /* Message only evaluated when the assertion fails, Lazy Load */
+        assertArrayEquals(expectedArray,actualArray, () -> "Student names are not equal");
+
+        Integer[] actualStudentId = studentService.getStudentIdByDepartment("Science");
+        Integer[] expectedStudentIds = {1,2};
+
+        assertArrayEquals(expectedStudentIds,actualStudentId);
+
+    }
 
 
 

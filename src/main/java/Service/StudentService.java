@@ -26,4 +26,23 @@ public class StudentService {
    }
 
 
+
+    public String[] getStudentNamesByDepartment(String department){
+        return students.stream()
+                .filter((student)-> student.getDepartment().equals(department))
+                .map(Student::getName)
+                .toArray(String[]::new);
+    }
+
+    public Integer[] getStudentIdByDepartment(String department){
+        return students.stream()
+                .filter((student)-> student.getDepartment().equals(department))
+                .map(Student::getId)
+                .toArray(Integer[]::new);
+    }
+
+
+
+
+
 }

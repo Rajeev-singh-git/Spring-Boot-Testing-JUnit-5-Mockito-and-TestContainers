@@ -205,3 +205,28 @@ void testAssertNotEquals() {
 
 ```
 
+## 6. `assertArrayEquals` Method
+
+The `assertArrayEquals` method is a static method provided by the `Assertions` class in JUnit 5.
+
+### Purpose
+
+This method is used to verify that two arrays are equal. Two arrays are considered equal if they have the same length and contain the same elements in the same order.
+
+### Behavior
+
+- **If the arrays are equal**: The test passes.
+- **If the arrays are not equal**: The test fails.
+
+### Syntax
+
+```java
+
+Assertions.assertArrayEquals(expectedArray, actualArray, message);
+```
+
+- **`expectedArray`**: The array you expect.
+- **`actualArray`**: The array being tested.
+- **`message`**: (Optional) The failure message to be displayed if the arrays are not equal.
+
+### Example
