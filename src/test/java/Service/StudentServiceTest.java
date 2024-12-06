@@ -42,7 +42,7 @@ class StudentServiceTest {
         assertFalse(()->actualResult);
         assertFalse(()->actualResult,"Student List must not be empty !!! ");
 
-        assertFalse(actualResult, () ->"Student List must not be empty !!! ");
+        assertFalse(actualResult, () -> "Student List must not be empty !!! ");
 
     }
 
