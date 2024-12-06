@@ -24,7 +24,7 @@ Assertions.assertTrue(condition, message);
 
 ### Example
 
- -[Code Example](https://github.com/Rajeev-singh-git/Spring-Boot-Testing-JUnit-5-Mockito-and-TestContainers/blob/main/src/test/java/Service/StudentServiceTest.java#L25)
+ -[Code Example](https://github.com/Rajeev-singh-git/Spring-Boot-Testing-JUnit-5-Mockito-and-TestContainers/blob/main/src/test/java/Service/StudentServiceTest.java#L13)
 
 ```java
  @Test
@@ -57,6 +57,8 @@ Assertions.assertFalse(condition, message);
 - **`message`**: (Optional) The failure message to be displayed if the condition is `true`.
 
 ### Example
+
+ -[Code Example](https://github.com/Rajeev-singh-git/Spring-Boot-Testing-JUnit-5-Mockito-and-TestContainers/blob/main/src/test/java/Service/StudentServiceTest.java#L29)
 
 ```java
 @Test
