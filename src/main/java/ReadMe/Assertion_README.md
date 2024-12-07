@@ -36,6 +36,8 @@ Assertions.assertTrue(condition, message);
 
 ### Example
 
+[Click for `assertTrue` example in code](https://github.com/Rajeev-singh-git/Spring-Boot-Testing-JUnit-5-Mockito-and-TestContainers/blob/main/src/test/java/Service/StudentServiceTest.java#L15-L31)
+
 ```java
 @Test
 void testAssertTrue() {
@@ -67,6 +69,8 @@ Assertions.assertFalse(condition, message);
 - **`message`**: (Optional) Failure message displayed if the condition is `true`.
 
 ### Example
+
+[Click for `assertFalse` example in code](https://github.com/Rajeev-singh-git/Spring-Boot-Testing-JUnit-5-Mockito-and-TestContainers/blob/main/src/test/java/Service/StudentServiceTest.java#L35-L53)
 
 ```java
 @Test
@@ -100,6 +104,8 @@ Assertions.assertNull(object, message);
 - **`message`**: (Optional) Failure message displayed if the object is not `null`.
 
 ### Example
+
+[Click for `assertNull` example in code](https://github.com/Rajeev-singh-git/Spring-Boot-Testing-JUnit-5-Mockito-and-TestContainers/blob/main/src/test/java/Service/StudentServiceTest.java#L58-L67)
 
 ```java
 
@@ -137,6 +143,8 @@ Assertions.assertNotNull(object, message);
 
 ### Example
 
+[Click for `assertNotNull` example in code](https://github.com/Rajeev-singh-git/Spring-Boot-Testing-JUnit-5-Mockito-and-TestContainers/blob/main/src/test/java/Service/StudentServiceTest.java#L71-L82)
+
 ```java
 
 @Test
@@ -172,6 +180,8 @@ Assertions.assertEquals(expected, actual, message);
 - **`message`**: (Optional) Failure message displayed if the values are not equal.
 
 ### Example
+
+[Click for `assertEqual` example in code](https://github.com/Rajeev-singh-git/Spring-Boot-Testing-JUnit-5-Mockito-and-TestContainers/blob/main/src/test/java/Service/StudentServiceTest.java#L85-L104)
 
 ```java
 
@@ -209,6 +219,8 @@ Assertions.assertNotEquals(unexpected, actual, message);
 
 ### Example
 
+[Click for `assertNotEquals` example in code](https://github.com/Rajeev-singh-git/Spring-Boot-Testing-JUnit-5-Mockito-and-TestContainers/blob/main/src/test/java/Service/StudentServiceTest.java#L107-L121)
+
 ```java
 @Test
 void testAssertNotEquals() {
@@ -238,6 +250,8 @@ Assertions.assertArrayEquals(expectedArray, actualArray, message);
 - **`message`**: (Optional) Failure message displayed if the arrays are not equal.
 
 ### Example
+
+[Click for `assertArrayEquals` example in code](https://github.com/Rajeev-singh-git/Spring-Boot-Testing-JUnit-5-Mockito-and-TestContainers/blob/main/src/test/java/Service/StudentServiceTest.java#L125-L148)
 
 ```java
 
@@ -269,6 +283,8 @@ Assertions.assertIterableEquals(expectedIterable, actualIterable, message)
 - **`message`**: (Optional) Failure message displayed if the iterables are not equal.
 
 ### Example
+
+[Click for `assertArrayEquals` example in code](https://github.com/Rajeev-singh-git/Spring-Boot-Testing-JUnit-5-Mockito-and-TestContainers/blob/main/src/test/java/Service/StudentServiceTest.java#L151-L171)
 
 ```java
 
