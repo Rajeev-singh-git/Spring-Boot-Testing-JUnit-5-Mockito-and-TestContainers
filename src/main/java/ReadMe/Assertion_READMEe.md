@@ -2,15 +2,15 @@
 
 ## Table of Contents
 
-1. [assertTrue Method]()
-2. [assertFalse Method]()
-3. [assertNull Method]()
-4. [assertNotNull Method]()
-5. [assertEquals Method]()
-6. [assertNotEquals Method]()
-7. [assertArrayEquals Method]()
-8. [assertIterableEquals Method](https://www.notion.so/Ex-154a1389f92a8070824ac95261bf6818?pvs=21)
-9. [Comparative Summary Table](https://www.notion.so/Ex-154a1389f92a8070824ac95261bf6818?pvs=21)
+1. [assertTrue Method](#1-asserttrue-method)
+2. [assertFalse Method](#2-assertfalse-method)
+3. [assertNull Method](#3-assertnull-method)
+4. [assertNotNull Method](#4-assertnotnull-method)
+5. [assertEquals Method](#5-assertequals-method)
+6. [assertNotEquals Method](#6-assertnotequals-method)
+7. [assertArrayEquals Method](#7-assertarrayequals-method)
+8. [assertIterableEquals Method](#8-assertiterableequals-method)
+9. [Comparative Summary Table](#comparative-summary-table)
 
 ---
 
