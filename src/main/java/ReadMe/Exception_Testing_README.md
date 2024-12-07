@@ -7,7 +7,7 @@ This guide explains how to use `assertThrows` and `assertThrowsExactly` in JUnit
 ## Table of Contents
 
 1. [Introduction](#introduction)
-2. [JUnit `assertThrows` Method](#junit-assertthrows-method)
+2. [JUnit `assertThrows` Method](#junit-assertthrows)
 3. [JUnit `assertThrowsExactly` Method](#junit-assertthrowsexactly-method)
 4. [Difference Between `assertThrows` and `assertThrowsExactly`](#difference-between-assertthrows-and-assertthrowsexactly)
 
@@ -33,6 +33,8 @@ The `assertThrows` method in JUnit is used to verify that a block of code throws
 - **Inheritance Compatibility**: The method allows the expected exception type to be a superclass of the actual exception.
 
 ### Example:
+
+[Click for `assertThrows` example in code](https://github.com/Rajeev-singh-git/Spring-Boot-Testing-JUnit-5-Mockito-and-TestContainers/blob/main/src/test/java/Service/StudentServiceTest.java#L174-L191)
 
 ```java
 import org.junit.jupiter.api.Assertions;
@@ -64,6 +66,8 @@ The `assertThrowsExactly` method ensures strict type matching for exception vali
 - **Strict Type Matching**: Subclasses or superclasses of the expected exception are not accepted.
 
 ### Example:
+
+[Click for `assertThrowsExactly` example in code](https://github.com/Rajeev-singh-git/Spring-Boot-Testing-JUnit-5-Mockito-and-TestContainers/blob/main/src/test/java/Service/StudentServiceTest.java#L194-L211)
 
 ```java
 import org.junit.jupiter.api.Assertions;
