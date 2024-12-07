@@ -1,6 +1,7 @@
 package Service;
 
 import Controller.Student;
+import Exception.StudentNotFoundException;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -168,6 +169,45 @@ class StudentServiceTest {
         assertIterableEquals(expectedStudentNameList,actualStudentNameList);
         assertIterableEquals(expectedStudentIdList,actualStudentIdList);
 
+    }
+
+    @Test
+    public void getStudentByNameTestUsingAssertThrows(){
+
+        StudentService studentService = new StudentService();
+        Student student = new Student(1,"Raj", "Science");
+
+        studentService.addStudent(student);
+
+        //test passes if the block of code throws the expected exception
+        assertThrows(StudentNotFoundException.class, ()->{
+                   studentService.getStudentByName("Rajeev");
+                });
+
+        // assertion will pass if the expected exception type is a superclass of the actual exception type
+        assertThrows(RuntimeException.class, ()-> {
+                    studentService.getStudentByName("Rajeev");
+                });
+    }
+
+
+    @Test
+    public void getStudentByNameTestUsingAssertThrowsExactly(){
+
+        StudentService studentService = new StudentService();
+        Student student = new Student(1,"Raj", "Science");
+
+        studentService.addStudent(student);
+
+        assertThrowsExactly(StudentNotFoundException.class, ()-> {
+            studentService.getStudentByName("Rajeev");
+        });
+
+        StudentNotFoundException exception =   assertThrowsExactly(StudentNotFoundException.class, ()-> {
+            studentService.getStudentByName("Rajeev");
+        });
+
+        assertEquals("Student not found with name: Rajeev",exception.getMessage());
     }
 
 

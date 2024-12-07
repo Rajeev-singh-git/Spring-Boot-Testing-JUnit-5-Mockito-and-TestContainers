@@ -1,6 +1,7 @@
 package Service;
 
 import Controller.Student;
+import Exception.StudentNotFoundException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,6 +57,16 @@ public class StudentService {
                 .map(Student::getId)
                 .collect(Collectors.toList());
     }
+
+    public Student getStudentByName(String name){
+
+       return students.stream()
+                .filter((student) -> student.getName().equals(name))
+                        .findFirst()
+                        .orElseThrow(()-> new StudentNotFoundException("Student not found with name: "+ name));
+
+    }
+
 
 
 
