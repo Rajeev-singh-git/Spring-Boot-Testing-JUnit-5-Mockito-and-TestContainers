@@ -230,3 +230,68 @@ Assertions.assertArrayEquals(expectedArray, actualArray, message);
 - **`message`**: (Optional) The failure message to be displayed if the arrays are not equal.
 
 ### Example
+
+### 
+
+```java
+@Test
+void testAssertArrayEquals() {
+    int[] expectedArray = {1, 2, 3};
+    int[] actualArray = {1, 2, 3}; // equal
+    Assertions.assertArrayEquals(expectedArray, actualArray, "The arrays must be equal.");
+}
+```
+
+## 7. `assertIterableEquals` Method
+
+The `assertIterableEquals` method is a static method provided by the `Assertions` class in JUnit 5.
+
+### Purpose
+
+This method is used to verify that two `Iterable` objects are equal. Two `Iterable` objects are considered equal if they contain the same elements in the same order.
+
+### Behavior
+
+- **If the iterables are equal**: The test passes.
+- **If the iterables are not equal**: The test fails.
+
+### Syntax
+
+```java
+
+Assertions.assertIterableEquals(expectedIterable, actualIterable, message);
+```
+
+- **`expectedIterable`**: The iterable you expect.
+- **`actualIterable`**: The iterable being tested.
+- **`message`**: (Optional) The failure message to be displayed if the iterables are not equal.
+
+### Example
+
+```java
+
+@Test
+void testAssertIterableEquals() {
+    List<String> expectedList = Arrays.asList("Alice", "Bob", "Charlie");
+    List<String> actualList = Arrays.asList("Alice", "Bob", "Charlie"); // equal
+    Assertions.assertIterableEquals(expectedList, actualList, "The iterables must be equal.");
+}
+```
+
+### Key Points
+
+- Works for any class implementing the `Iterable` interface (e.g., `List`, `Set`).
+- The order of elements is important; even if the same elements are present but in a different order, the test will fail.
+
+### Lazy Failure Message Example
+
+```java
+
+@Test
+void testAssertIterableEqualsWithLazyMessage() {
+    List<String> expectedList = Arrays.asList("Alice", "Bob", "Charlie");
+    List<String> actualList = Arrays.asList("Alice", "Charlie", "Bob"); // not equal
+    Assertions.assertIterableEquals(expectedList, actualList,
+        () -> "Expected: " + expectedList + ", but got: " + actualList);
+}
+```

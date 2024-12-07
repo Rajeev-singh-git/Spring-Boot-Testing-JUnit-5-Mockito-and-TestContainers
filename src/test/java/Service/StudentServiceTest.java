@@ -123,13 +123,11 @@ class StudentServiceTest {
 
     @Test
     public void getStudentNamesByDepartmentTestUsing_AssertArrayEqual(){
-
         StudentService studentService = new StudentService();
 
         Student student = new Student(1,"Rajeev","Science");
         Student student1 = new Student(2,"Ravi","Science");
         Student student2 = new Student(3,"Kavi","Arts");
-
         studentService.addStudent(student);
         studentService.addStudent(student1);
         studentService.addStudent(student2);
@@ -138,7 +136,6 @@ class StudentServiceTest {
         String[] expectedArray = {"Rajeev","Ravi"};
 
         assertArrayEquals(expectedArray,actualArray);
-
         // Message always evaluated, even when the assertion passes
         assertArrayEquals(expectedArray,actualArray, "Student names are not equal");
         /* Message only evaluated when the assertion fails, Lazy Load */
@@ -148,8 +145,31 @@ class StudentServiceTest {
         Integer[] expectedStudentIds = {1,2};
 
         assertArrayEquals(expectedStudentIds,actualStudentId);
+    }
+
+    @Test
+    public void getStudentNameListByDepartmentTestUsing_AssertIterableEqual(){
+        StudentService studentService = new StudentService();
+
+        Student student = new Student(1,"Rajeev","Science");
+        Student student1 = new Student(2,"Ravi","Science");
+        Student student2 = new Student(3,"Kavi","Arts");
+        studentService.addStudent(student);
+        studentService.addStudent(student1);
+        studentService.addStudent(student2);
+
+        List<String> actualStudentNameList = studentService.getStudentNameListByDepartment("Science");
+        List<String> expectedStudentNameList = Arrays.asList("Rajeev","Ravi");
+
+
+        List<Integer> actualStudentIdList = studentService.getStudentIdListByDepartment("Science");
+        List<Integer> expectedStudentIdList = Arrays.asList(1,2);
+
+        assertIterableEquals(expectedStudentNameList,actualStudentNameList);
+        assertIterableEquals(expectedStudentIdList,actualStudentIdList);
 
     }
+
 
 
 
