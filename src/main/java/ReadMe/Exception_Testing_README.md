@@ -6,7 +6,7 @@ This guide explains how to use `assertThrows` and `assertThrowsExactly` in JUnit
 
 ## Table of Contents
 
-1. [Introduction]()
+1. [Introduction](#1-Introduction)
 2. [JUnit `assertThrows` Method]
 3. [JUnit `assertThrowsExactly` Method]
 4. [Difference Between `assertThrows` and `assertThrowsExactly`]
