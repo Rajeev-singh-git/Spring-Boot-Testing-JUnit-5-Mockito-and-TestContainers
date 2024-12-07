@@ -6,10 +6,10 @@ This guide explains how to use `assertThrows` and `assertThrowsExactly` in JUnit
 
 ## Table of Contents
 
-1. [Introduction](#1-Introduction)
-2. [JUnit `assertThrows` Method]
-3. [JUnit `assertThrowsExactly` Method]
-4. [Difference Between `assertThrows` and `assertThrowsExactly`]
+1. [Introduction](#introduction)
+2. [JUnit `assertThrows` Method](#junit-assertthrows-method)
+3. [JUnit `assertThrowsExactly` Method](#junit-assertthrowsexactly-method)
+4. [Difference Between `assertThrows` and `assertThrowsExactly`](#difference-between-assertthrows-and-assertthrowsexactly)
 
 ---
 
