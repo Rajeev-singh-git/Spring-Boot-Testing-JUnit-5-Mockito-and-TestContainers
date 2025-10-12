@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-1. [assertTrue Method](#1-asserttrue-method)
+1. [assertTrue Method](#1-asserttrue)
 2. [assertFalse Method](#2-assertfalse-method)
 3. [assertNull Method](#3-assertnull-method)
 4. [assertNotNull Method](#4-assertnotnull-method)
