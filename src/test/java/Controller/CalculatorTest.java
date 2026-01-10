@@ -1,9 +1,6 @@
 package Controller;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -15,6 +12,11 @@ class CalculatorTest {
     @BeforeEach
     void setup(){
         calculator = new Calculator();
+    }
+
+    @AfterEach
+    void tearDown(){
+        calculator = null;
     }
 
     @Test
