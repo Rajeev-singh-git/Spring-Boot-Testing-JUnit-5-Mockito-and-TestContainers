@@ -1,5 +1,6 @@
 package Controller;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -25,6 +26,16 @@ class CalculatorTest {
         int subtraction = calculator.subtract(30,20);
 
         assertEquals(10,subtraction);
+    }
+
+
+    @Test
+    @Disabled("Disabled under bug fix")
+    void multipleTest(){
+        Calculator calculator = new Calculator();
+        int multiplication = calculator.multiply(30,20);
+
+        assertEquals(600,multiplication);
     }
 
 }
